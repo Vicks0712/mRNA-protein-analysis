@@ -2,6 +2,7 @@ import logging
 import os
 
 class Logger:
+    _project_path = os.path.dirname(os.path.dirname(os.getcwd()))
     _instance = None
 
     def __new__(cls, log_file: str = 'mRNA_analysis.log', log_level: int = logging.DEBUG):
@@ -31,7 +32,7 @@ class Logger:
         Returns:
             logging.Logger: The created logger.
         """
-        logger = logging.getLogger("hermes-video")
+        logger = logging.getLogger("mRNA_analysis.log")
         logger.setLevel(log_level)
         return logger
 
@@ -83,7 +84,7 @@ class Logger:
         Returns:
             str: The path to the log directory.
         """
-        log_directory = os.path.dirname(os.getcwd()) + '/logs'  # Corregir ruta del directorio de logs
+        log_directory = self._project_path + '/logs'
         if not os.path.exists(log_directory):
             os.makedirs(log_directory)
         return log_directory

@@ -1,7 +1,7 @@
-import os
 import yaml
+import os
 
-from src.step1.extraction.mRNADataExtractor import mRNADataExtractor
+from src.step1.preprocessing import mRNADataPreprocessing
 
 PROJECT_PATH = os.path.dirname(os.path.dirname(os.getcwd()))
 
@@ -12,8 +12,9 @@ def load_config(config_file):
 
 def main():
     config = load_config(PROJECT_PATH + '/config/config.yaml')
-    data_extractor = mRNADataExtractor(config)
-    data_extractor.run()
+
+    data_preprocessor = mRNADataPreprocessing(config)
+    data_preprocessor.run()
 
 if __name__ == '__main__':
     main()
