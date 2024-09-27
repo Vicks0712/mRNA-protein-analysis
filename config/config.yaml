@@ -1,5 +1,5 @@
 email: 'youremail@gmail.com'
-project_path: "C:/Users/victo/Desktop/curro/mRNA-protein-analysis"
+project_path: ""
 
 data_extraction:
   output_dir: '/data/raw'
