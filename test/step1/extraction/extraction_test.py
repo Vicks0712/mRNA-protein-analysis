@@ -1,14 +1,9 @@
 import os
-import yaml
 
 from src.step1.extraction.mRNADataExtractor import mRNADataExtractor
+from src.utils.utils import load_config
 
-PROJECT_PATH = os.path.dirname(os.path.dirname(os.getcwd()))
-
-def load_config(config_file):
-    with open(config_file, 'r') as file:
-        config = yaml.safe_load(file)
-    return config
+PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd())))
 
 def main():
     config = load_config(PROJECT_PATH + '/config/config.yaml')

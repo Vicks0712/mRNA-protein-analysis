@@ -1,14 +1,10 @@
-import yaml
 import os
 
-from src.step1.preprocessing import mRNADataPreprocessing
+from src.step1.preprocessing.mRNADataPreprocessing import mRNADataPreprocessing
+from src.utils.utils import load_config
 
-PROJECT_PATH = os.path.dirname(os.path.dirname(os.getcwd()))
+PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.getcwd())))
 
-def load_config(config_file):
-    with open(config_file, 'r') as file:
-        config = yaml.safe_load(file)
-    return config
 
 def main():
     config = load_config(PROJECT_PATH + '/config/config.yaml')

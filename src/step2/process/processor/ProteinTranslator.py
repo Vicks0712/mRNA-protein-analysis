@@ -1,4 +1,4 @@
-from src.step2.process.ARNmProcessor import ARNmProcessor
+from src.step2.process.mRNAProcessor import ARNmProcessor
 from Bio.Seq import Seq
 
 

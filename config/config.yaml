@@ -1,5 +1,5 @@
 email: 'youremail@gmail.com'
-project_path: "C:/Users/victo/Desktop/curro/mRNA-protein-analysis"
+project_path: ""
 
 data_extraction:
   output_dir: '/data/raw'
@@ -10,8 +10,8 @@ data_extraction:
 
 data_cleaning:
   input_dir: '/data/raw'
-  output_dir: '/data/processed'
+  output_dir: '/data/processed/mRNA'
 
 sequence_translation:
-  input_dir: '/data/processed'
+  input_dir: '/data/processed/mRNA'
   output_dir: '/data/processed/proteins'
